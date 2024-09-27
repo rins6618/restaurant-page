@@ -1,0 +1,80 @@
+#content {
+    place-content: center; 
+}
+
+article.menu {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 4ch;
+    margin: 40px 10%;
+}
+
+
+.dot-separated {
+    width: 100%;
+    font-family: monospace;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border: 0.25rem #232323 solid;
+    box-shadow: 1rem 1rem 0px 0px #232323;
+}
+
+@media only screen and (max-width: 700px) {
+    
+    article.menu {
+        margin: 40px 6%;
+    }
+
+    .dot-separated {
+        font-size: 0.4rem;
+        padding: 0.5rem;
+        box-shadow: 0.4rem 0.4rem 0px 0px #232323;
+    }
+  }
+
+.dot-separated > tbody {
+    width: 100%;
+    overflow: scroll;
+}
+
+.dot-separated tr {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 1ch;
+    padding: 1ch;
+}
+
+.dot-separated tr:nth-child(2n) {
+    background-color: #eee;
+}
+
+.dot-separated tr:first-child {
+    font-size: calc(0.1em + 1em);
+    font-weight: bolder;
+    margin-bottom: 3ch;
+}
+
+.dot-separated tr:first-child td::after,
+.dot-separated tr:first-child td::before {
+    content: '';
+}
+
+.dot-separated td {
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dot-separated td:first-child {
+    font-weight: bold;
+}
+
+.dot-separated td:first-child::after {
+    font-family: monospace;
+    content: " .....................................................................................................................................................................................";
+}
+
+.dot-separated td:nth-child(2n)::before {
+    content: '$ ';
+}

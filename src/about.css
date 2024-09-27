@@ -1,0 +1,36 @@
+#content {
+    place-content: center; 
+}
+
+article.about {
+    flex-direction: column;
+    width: 60%;
+    margin: 40px 10%;
+    padding: 1rem;
+    border: 0.25rem #232323 solid;
+    box-shadow: 1rem 1rem 0px 0px #232323;
+}
+
+.about > h2 {
+    margin-bottom: 1ch;
+}
+
+.about > h3 {
+    margin: 1ch 0;
+}
+
+.about span {
+    font-family: monospace;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 700px) {
+    
+    article.about {
+        margin: 40px 6%;
+        width: 90%;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        box-shadow: 0.3rem 0.3rem 0px 0px #232323;
+    }
+  }

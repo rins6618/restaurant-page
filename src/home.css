@@ -1,0 +1,47 @@
+#content {
+    place-content: center;
+    
+}
+
+article.home {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 4ch;
+    margin: 40px 10%;
+}
+
+.two-column {
+    flex-direction: row;
+    gap: 12ch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    flex-direction: column;
+    align-content: center;
+}
+
+.two-column > * {
+    display: flex;
+    margin: 0;
+    width: 40%;
+    flex: 1 0 auto;
+}
+
+.image div {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+article p {
+    line-height: 1.5;
+}
+
+article h1 {
+    line-height: 1.2;
+}
